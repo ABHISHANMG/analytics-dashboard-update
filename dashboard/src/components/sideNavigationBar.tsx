@@ -38,7 +38,7 @@ const DashboardSidebar = () => {
                 {/* User Profile Section */}
                 <div className="flex items-center space-x-3 mb-8">
                     <div className="rounded-full flex items-center justify-center">
-                        <img src="/src/assets/avaterLogo.png" className='w-[24px] h-[24px]' alt="ByeWind" />
+                        <img src="/assets/avaterLogo.png" className='w-[24px] h-[24px]' alt="ByeWind" />
                     </div>
                     <span className="font-sans font-normal text-sm leading-5 tracking-normal text-[#1c1c1c] dark:text-[#fff]">ByeWind</span>
                 </div>
