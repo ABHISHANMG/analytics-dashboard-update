@@ -9,7 +9,7 @@ function getInitialTheme(): Theme | undefined {
   if (stored === 'light' || stored === 'dark') {
     return stored as Theme;
   }
-  return undefined; // Explicitly return undefined if no valid theme is found
+  return undefined;
 }
 
 export default function useTheme(): [Theme, (theme: Theme) => void] {
@@ -35,7 +35,6 @@ export default function useTheme(): [Theme, (theme: Theme) => void] {
 
     apply(theme);
 
-    // If 'system' theme, listen for OS / browser setting changes
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handler = () => {
       if (theme === 'light') {
