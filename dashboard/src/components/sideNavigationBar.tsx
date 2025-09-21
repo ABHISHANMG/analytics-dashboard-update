@@ -29,7 +29,7 @@ const DashboardSidebar = () => {
     };
 
     return (
-        <aside className="w-[212px] bg-[#ffffff] dark:bg-[#1c1c1c] transition-colors duration-500 border-r border-[#e8e8e8] dark:border-[#333333] h-screen overflow-y-auto">
+        <aside className="w-[250px] bg-[#ffffff] dark:bg-[#1c1c1c]  border-r border-[#e8e8e8] dark:border-[#333333] h-screen overflow-y-auto">
             <div className="p-4">
                 {/* User Profile Section */}
                 <div className="flex items-center space-x-3 mb-8">

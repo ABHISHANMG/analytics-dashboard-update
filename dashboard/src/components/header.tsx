@@ -21,21 +21,19 @@ export default function Header() {
 
   return (
 
-    <header className="bg-[#ffffff] dark:bg-[#1c1c1c] border-b transition-colors duration-500 border-[#e8e8e8] dark:border-[#333333] px-4 py-3 w-full">
+    <header className="bg-[#ffffff] dark:bg-[#1c1c1c] border-b  border-[#e8e8e8] dark:border-[#333333] px-4 py-3 w-full">
       <div className="flex items-center justify-between">
-        {/* Left section - Menu, Star, and Navigation */}
+
         <div className="flex items-center space-x-4">
-          {/* Menu icon */}
+
           <button className="p-1 text-[#1c1c1c] dark:text-[#fff]">
             <CollapseIcon />
           </button>
 
-          {/* Star icon */}
           <button className="p-1 text-[#1c1c1c] dark:text-[#fff]">
             <StarIcon />
           </button>
 
-          {/* Navigation items */}
           <nav className="flex items-center space-x-6">
             <span className="text-[#a3a3a3] dark:text-[#787878] text-sm font-medium font-sans leading-5 tracking-normal text-center align-middle">Dashboards</span>
             <span className="text-[#a3a3a3] dark:text-[#787878] text-sm font-medium font-sans leading-5 tracking-normal text-center align-middle">/</span>
@@ -43,11 +41,10 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* Right section - Search and Icons */}
         <div className="flex items-center space-x-4">
-          {/* Search */}
+
           <div className="px-[10px] py-1.5 flex text-[#bdbdbd] dark:text-[#5c5c5c] text-[14px] justify-between text-sm bg-[#f4f4f4] dark:bg-[#333333] rounded-[8px] w-64">
-            <div className='flex items-center gap-[5px] transition-colors duration-500'>
+            <div className='flex items-center gap-[5px] '>
             <SearchIcon />
             <input
               type="text"
@@ -58,11 +55,10 @@ export default function Header() {
               ⌘J
           </div>
 
-          {/* Icon buttons */}
           <div className="flex items-center space-x-2 gap-1 text-[#1c1c1c] dark:text-[#fff]">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded"
+              className="p-2 rounded cursor-pointer"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' && (

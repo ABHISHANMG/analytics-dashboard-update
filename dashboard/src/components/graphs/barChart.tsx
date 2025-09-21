@@ -34,18 +34,18 @@ const BarChartMetrics = () => {
     }
   ];
 
-  const formatYAxisLabel = (value) => {
+  const formatYAxisLabel = (value: number) => {
     if (value === 0) return '0';
     return `${value}M`;
   };
 
   return (
-    <div className="bg-[#f7f9fb] dark:bg-[#282828] w-[432px] h-[252px] min-w-[400px] gap-4 rotate-0 opacity-100 rounded-[16px] p-6">
+    <div className="bg-[#f7f9fb] dark:bg-[#282828] min-w-[560px] gap-4 rotate-0 opacity-100 rounded-[16px] p-6 pr-[10px]">
       <h2 className="text-sm font-semibold text-[#1c1c1c] dark:text-[#fff] mb-8">
         Projections vs Actuals
       </h2>
       
-      <div className="w-[450px] relative h-[180px] right: 42px;">
+      <div className="w-[600px] relative h-[250px] ml-[-42px] mt-[-20px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
