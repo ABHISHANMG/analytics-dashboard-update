@@ -37,14 +37,12 @@ export default function useTheme(): [Theme, (theme: Theme) => void] {
 
     // If 'system' theme, listen for OS / browser setting changes
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handler = (e: MediaQueryListEvent) => {
+    const handler = () => {
       if (theme === 'system') {
         apply('system');
       }
     };
     mediaQuery.addEventListener('change', handler);
-
-    // cleanup
     return () => {
       mediaQuery.removeEventListener('change', handler);
     };

@@ -1,6 +1,6 @@
 import './App.css'
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import EcommerceMetrics from './components/graphs/ecommerceMetrics'
 import RevenueChart from "./components/graphs/revenueChart"
@@ -10,7 +10,6 @@ import Header from './components/header'
 import SideNavigationBar from './components/sideNavigationBar'
 import WorldMapChart from './components/graphs/worldmapChart'
 import NotificationPanel from './components/notificationPanel'
-import OrderListTable from './components/orderList'
 import Order from './pages/order'
 
 

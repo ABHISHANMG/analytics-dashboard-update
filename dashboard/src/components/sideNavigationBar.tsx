@@ -151,7 +151,7 @@ const DashboardSidebar = () => {
     );
 };
 
-const NavItem = ({ icon, label, isActive = false, hasChevron = false }) => {
+const NavItem: React.FC<{ icon: React.ReactNode; label: string; isActive?: boolean; hasChevron?: boolean }> = ({ icon, label, isActive = false, hasChevron = false }) => {
     return (
         <div className={`flex items-center p-2 rounded-md text-[#1c1c1c] dark:text-[#fff] ${isActive
             ? 'bg-[#f4f4f4] dark:bg-[#333333] dark:text-[#1c1c1c]'
@@ -174,7 +174,7 @@ const NavItem = ({ icon, label, isActive = false, hasChevron = false }) => {
     );
 };
 
-const SubNavItem = ({ label }) => {
+const SubNavItem: React.FC<{ label: string }> = ({ label }) => {
     return (
         <div className="p-2 text-sm text-[#1c1c1c] dark:text-[#fff] hover:bg-[#f4f4f4] hover:dark:bg-[#333333] rounded-md cursor-pointer">
             {label}
