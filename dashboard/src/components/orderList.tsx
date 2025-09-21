@@ -240,7 +240,7 @@ const OrderListTable = () => {
                             onClick={() => setCurrentPage(page)}
                             className={`px-3 py-2 text-sm rounded-lg cursor-pointer ${currentPage === page
                                     ? 'bg-[#e8e8e8] dark:bg-[#333333] text-[#1c1c1c] dark:text-[#fff]'
-                                    : 'text-[#1c1c1c] dark:text-[#fff] hover:bg-gray-100'
+                                    : 'text-[#1c1c1c] dark:text-[#fff] hover:bg-[#333333]'
                                 }`}
                         >
                             {page}
