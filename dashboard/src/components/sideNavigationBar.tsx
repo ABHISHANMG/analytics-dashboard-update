@@ -17,7 +17,11 @@ import BookmarkIcon from './icons/bookmarkIcon';
 
 
 const DashboardSidebar = () => {
-    const [expandedSections, setExpandedSections] = useState({
+    type ExpandedSections = {
+        [key: string]: boolean;
+    };
+
+    const [expandedSections, setExpandedSections] = useState<ExpandedSections>({
         userProfile: true
     });
 
