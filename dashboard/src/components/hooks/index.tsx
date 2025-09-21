@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 
 const THEME_KEY = "theme";
 
-type Theme = 'light' | 'dark' | 'system';
+type Theme = 'light' | 'dark';
 
-function getInitialTheme(): Theme {
+function getInitialTheme(): Theme | undefined {
   const stored = localStorage.getItem(THEME_KEY);
-  if (stored === 'light' || stored === 'dark' || stored === 'system') {
+  if (stored === 'light' || stored === 'dark') {
     return stored as Theme;
   }
-  return 'system';
+  return undefined; // Explicitly return undefined if no valid theme is found
 }
 
 export default function useTheme(): [Theme, (theme: Theme) => void] {
-  const [theme, setThemeState] = useState<Theme>(getInitialTheme);
+  const [theme, setThemeState] = useState<Theme>(getInitialTheme() || 'light');
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -38,8 +38,8 @@ export default function useTheme(): [Theme, (theme: Theme) => void] {
     // If 'system' theme, listen for OS / browser setting changes
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handler = () => {
-      if (theme === 'system') {
-        apply('system');
+      if (theme === 'light') {
+        apply('light');
       }
     };
     mediaQuery.addEventListener('change', handler);
