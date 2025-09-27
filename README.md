@@ -193,7 +193,3 @@ No environment variables are required for basic functionality.
 - [Lucide React](https://lucide.dev/) for beautiful icons
 - [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
 - [Vite](https://vitejs.dev/) for fast development experience
-
----
-
-## Thanks for the opportunity
